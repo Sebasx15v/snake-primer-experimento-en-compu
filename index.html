@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Snake 🐍</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#4caf50">
+<link rel="icon" href="icon-192.png">
 <style>
   body { margin:0; background:#111; color:#fff; font-family:sans-serif; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; }
   canvas { background:#1b1b1b; border:3px solid #4caf50; max-width:95vw; }
@@ -90,6 +93,7 @@ document.addEventListener('keydown', e => {
 });
 
 start();
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
 </script>
 </body>
 </html>
